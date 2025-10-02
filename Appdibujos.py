@@ -6,44 +6,55 @@ st.title("🌌 Tablero de Energías")
 st.markdown("""
 Dibuja tu energía interior.  
 Cada color refleja un estado distinto de tu ser.  
-
-**Rojo = Energía vital, impulso**  
-**Azul = Paz y calma interior**  
-**Verde = Renacimiento y esperanza**  
-**Amarillo = Alegría y claridad**  
-**Naranja = Transformación y cambio**  
-**Morado = Intuición y sabiduría**  
-**Blanco = Pureza y nuevos comienzos**  
-**Negro = Misterio y fuerza**  
-**Gris = Intranquilidad y transición**  
-**Rosado = Afecto y sensibilidad**
-**Café = Estancamiento y desaliento**
 """)
 
+# Mostrar significados de los colores en columnas
+st.subheader("🌈 Paleta de Energías")
+cols = st.columns(5)
+
+with cols[0]:
+    st.markdown("🔴 **Rojo** = Energía vital, impulso")
+    st.markdown("🟡 **Amarillo** = Alegría y claridad")
+
+with cols[1]:
+    st.markdown("🔵 **Azul** = Paz y calma interior")
+    st.markdown("🟠 **Naranja** = Transformación y cambio")
+
+with cols[2]:
+    st.markdown("🟢 **Verde** = Renacimiento y esperanza")
+    st.markdown("🟣 **Morado** = Intuición y sabiduría")
+
+with cols[3]:
+    st.markdown("⚪ **Blanco** = Pureza y nuevos comienzos")
+    st.markdown("⚫ **Negro** = Misterio y fuerza")
+
+with cols[4]:
+    st.markdown("🌫️ **Gris** = Intranquilidad y transición")
+    st.markdown("🤎 **Café** = Estancamiento y desaliento")
+    st.markdown("🌸 **Rosado** = Afecto y sensibilidad")
+
+# ============================
+# Panel lateral
+# ============================
 with st.sidebar:
     st.subheader("🔮 Personaliza tu Energía")
     
-    # Canvas dimensions
     st.subheader("Dimensiones del Tablero")
     canvas_width = st.slider("Ancho del tablero", 300, 700, 500, 50)
     canvas_height = st.slider("Alto del tablero", 200, 600, 300, 50)
     
-    # Drawing mode
     drawing_mode = st.selectbox(
         "Herramienta de Energía:",
         ("freedraw", "line", "rect", "circle", "polygon", "point", "transform"),
     )
     
-    # Stroke width
     stroke_width = st.slider("Intensidad del trazo", 1, 30, 15)
-    
-    # Stroke color
     stroke_color = st.color_picker("Selecciona el color de tu energía", "#FFFFFF")
-    
-    # Background color
     bg_color = st.color_picker("Color del fondo (tu universo)", "#000000")
 
+# ============================
 # Canvas
+# ============================
 canvas_result = st_canvas(
     fill_color="rgba(255, 255, 255, 0.3)",
     stroke_width=stroke_width,
@@ -56,6 +67,6 @@ canvas_result = st_canvas(
 )
 
 st.divider()
-st.markdown("✨No pienses demasiado en lo que dibujas. "
+st.markdown("✨ No pienses demasiado en lo que dibujas. "
             "Deja que tus trazos fluyan, y observa qué colores emergen: "
             "esa es la vibración de tu energía en este momento.")
