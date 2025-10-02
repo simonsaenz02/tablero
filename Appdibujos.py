@@ -2,9 +2,23 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
 # Título principal
-st.title("🌈 Tablero de Energías")
-st.markdown("Dibuja tu energía interior: cada color refleja una emoción o estado de ánimo. "
-            "Rojo = Pasión ❤️, Azul = Calma 💙, Verde = Esperanza 💚, Amarillo = Alegría 💛")
+st.title("🌌 Tablero de Energías")
+st.markdown("""
+Dibuja tu energía interior.  
+Cada color refleja un estado distinto de tu ser.  
+
+**Rojo = Energía vital, impulso**  
+**Azul = Paz y calma interior**  
+**Verde = Renacimiento y esperanza**  
+**Amarillo = Alegría y claridad**  
+**Naranja = Transformación y cambio**  
+**Morado = Intuición y sabiduría**  
+**Blanco = Pureza y nuevos comienzos**  
+**Negro = Misterio y fuerza**  
+**Gris = Intranquilidad y transición**  
+**Rosado = Afecto y sensibilidad**
+**Café = Estancamiento y desaliento**
+""")
 
 with st.sidebar:
     st.subheader("🔮 Personaliza tu Energía")
@@ -24,10 +38,10 @@ with st.sidebar:
     stroke_width = st.slider("Intensidad del trazo", 1, 30, 15)
     
     # Stroke color
-    stroke_color = st.color_picker("Color de tu energía", "#FFFFFF")
+    stroke_color = st.color_picker("Selecciona el color de tu energía", "#FFFFFF")
     
     # Background color
-    bg_color = st.color_picker("Color del fondo", "#000000")
+    bg_color = st.color_picker("Color del fondo (tu universo)", "#000000")
 
 # Canvas
 canvas_result = st_canvas(
@@ -42,5 +56,6 @@ canvas_result = st_canvas(
 )
 
 st.divider()
-st.markdown("✨ **Tip energético**: Usa trazos libres para tu energía fluida, círculos para armonía, "
-            "y líneas rectas para equilibrio. ¡Deja que tu tablero refleje cómo te sientes ahora!")
+st.markdown("✨No pienses demasiado en lo que dibujas. "
+            "Deja que tus trazos fluyan, y observa qué colores emergen: "
+            "esa es la vibración de tu energía en este momento.")
