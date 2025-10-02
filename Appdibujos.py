@@ -6,7 +6,6 @@ st.title("Tablero para dibujo")
 with st.sidebar:
     st.subheader("Propiedades del Tablero")
     
-    ```
     # Canvas dimensions (moved to the top)
     st.subheader("Dimensiones del Tablero")
     canvas_width = st.slider("Ancho del tablero", 300, 700, 500, 50)
