@@ -2,46 +2,46 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
 # Título principal
-st.title("🌌 Tablero de Energías")
+st.title("🌌 Mapa Estelar Interactivo")
 st.markdown("""
-Dibuja tu energía interior.  
-Cada color refleja un estado distinto de tu ser.  
+Diseña tu propio cielo estrellado.  
+Cada color representa un tipo de astro o fenómeno cósmico que puedes ubicar en tu mapa.  
 """)
 
-# Paleta de energías en una sola oración
-st.subheader("🌈 Paleta de Energías")
+# Paleta de astros
+st.subheader("✨ Paleta Cósmica")
 st.markdown(
-"🔴 **Rojo = Energía vital, impulso**, "
-"🟡 **Amarillo = Alegría y claridad**, "
-"🔵 **Azul = Paz y calma interior**, "
-"🟠 **Naranja = Transformación y cambio**, "
-"🟢 **Verde = Renacimiento y esperanza**, "
-"🟣 **Morado = Intuición y sabiduría**, "
-"⚪ **Blanco = Pureza y nuevos comienzos**, "
-"⚫ **Negro = Misterio y fuerza**, "
-"🌫️ **Gris = Intranquilidad y transición**, "
-"🤎 **Café = Estancamiento y desaliento**, "
-"🌸 **Rosado = Afecto y sensibilidad**."
+"🔴 **Rojo = Estrella gigante roja**, "
+"🟡 **Amarillo = Estrella joven brillante**, "
+"🔵 **Azul = Estrella supercaliente**, "
+"🟠 **Naranja = Nebulosa en formación**, "
+"🟢 **Verde = Planeta habitable**, "
+"🟣 **Morado = Agujero de gusano**, "
+"⚪ **Blanco = Luna o cometa**, "
+"⚫ **Negro = Región de vacío profundo**, "
+"🌫️ **Gris = Polvo interestelar**, "
+"🤎 **Café = Asteroides o rocas cósmicas**, "
+"🌸 **Rosado = Nebulosa rosada**."
 )
 
 # ============================
 # Panel lateral
 # ============================
 with st.sidebar:
-    st.subheader("🔮 Personaliza tu Energía")
+    st.subheader("🛰️ Personaliza tu Cielo")
     
-    st.subheader("Dimensiones del Tablero")
-    canvas_width = st.slider("Ancho del tablero", 300, 700, 500, 50)
-    canvas_height = st.slider("Alto del tablero", 200, 600, 300, 50)
+    st.subheader("Dimensiones del Mapa")
+    canvas_width = st.slider("Ancho del cielo", 300, 700, 500, 50)
+    canvas_height = st.slider("Alto del cielo", 200, 600, 300, 50)
     
     drawing_mode = st.selectbox(
-        "Herramienta de Energía:",
+        "Herramienta espacial:",
         ("freedraw", "line", "rect", "circle", "polygon", "point", "transform"),
     )
     
-    stroke_width = st.slider("Intensidad del trazo", 1, 30, 15)
-    stroke_color = st.color_picker("Selecciona el color de tu energía", "#FFFFFF")
-    bg_color = st.color_picker("Color del fondo (tu universo)", "#000000")
+    stroke_width = st.slider("Tamaño del trazo estelar", 1, 30, 15)
+    stroke_color = st.color_picker("Selecciona el color del astro", "#FFFFFF")
+    bg_color = st.color_picker("Color del fondo del universo", "#000000")
 
 # ============================
 # Canvas
@@ -58,6 +58,5 @@ canvas_result = st_canvas(
 )
 
 st.divider()
-st.markdown("✨ No pienses demasiado en lo que dibujas. "
-            "Deja que tus trazos fluyan, y observa qué colores emergen: "
-            "esa es la vibración de tu energía en este momento.")
+st.markdown("🌠 Crea tus propias constelaciones y explora el universo a tu manera.")
+
